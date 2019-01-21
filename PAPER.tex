@@ -1,15 +1,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 	   美赛模板，正文部分		 %
-%          PAPER.tex         %
+% 	   美赛模板，正文部分		 
+%          PAPER.tex         
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[12pt]{article}
 
-% 请在此填写控制号、题号和标题 
-% 年份不需要填（自动以当前电脑时间年份为准）
-\usepackage[12345]{easymcm}\problem{A}   
-\usepackage{palatino} % 这个是COMAP官方杂志的字体，如不需要可注释掉，以使用默认字体
-\title{An MCM Paper Made by Team 12345}  % 标题
+% 请在此填写控制号、题号和标题，年份不需要填（自动以当前电脑时间年份为准）
+\usepackage[1234567]{easymcm}\problem{A}   
+\usepackage{palatino} % 这个是COMAP官方杂志采用的字体，如不需要可注释掉，以使用默认字体
+\title{An MCM Paper Made by Team 1234567}  % 标题
+
+% 如您参加的是ICM（即选择了D/E/F题），请使用以下的命令修改Summary Sheet题头
+% \renewcommand{\contest}{Interdisciplinary Contest in Modeling (ICM) Summary Sheet}
 
 % 正文开始
 \begin{document}
@@ -79,8 +81,44 @@ The primary notations used in this paper are listed in \textbf{Table \ref{tb:not
 
 \begin{thebibliography}{99}
 \addcontentsline{toc}{section}{References}  %引用部分标题（"Refenrence"）的重命名
-\bibitem{1}Elisa T. Lee, Oscar T. Survival Analysis in Public Health Research. \emph{Go.College of Public Health}, 1997(18):105-134.
+\bibitem{1}Elisa T. Lee, Oscar T. Survival Analysis in Public Health Research. \emph{Go. College of Public Health}, 1997(18):105-134.
 \bibitem{2}Wikipedia: Proportional hazards model. 2017.11.26. \texttt{\\https://en.wikipedia.org/wiki/Proportional\_{}hazards\_{}model}
 \end{thebibliography}
+
+
+% ==============以下为附录内容，如您的论文中不需要程序附录请自行删除====================
+\clearpage
+\begin{subappendices}						% 附录环境
+\section*{Apendix: The source codes}		% 附录标题可以自行修改
+\addcontentsline{toc}{section}{Appendix}  	% 将附录内容加入到目录中
+
+This MATLAB program is used to calculate the value of variable $a$.
+\begin{lstlisting}[language=Matlab, caption=\texttt{temp.m}]
+a = 0;
+for i = 1:5
+	a = a + 1;
+end
+\end{lstlisting}
+
+This LINGO program is used to search the optimize solution of 0-1 problem.
+\begin{lstlisting}[language=Lingo, caption=\texttt{temp.lg4}]
+model:
+sets:
+WP/1..12/: M, W, X;
+endsets
+data:
+M = 2 5 18 3 2 5 10 4 11 7 14 6;
+W = 5 10 13 4 3 11 13 10 8 16 7 4;
+enddata
+max = @sum(WP:W*X);
+@sum(WP: M * X)<=46;
+@for(WP: @bin(X));
+end
+\end{lstlisting}
+
+\end{subappendices}
+% =================================================================================
+
+
 
 \end{document}
