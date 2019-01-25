@@ -47,7 +47,7 @@
 \usepackage{titletoc}
 \setcounter{tocdepth}{3}    		% 目录显示到subsubsection(3)级别,若只需到subsection(2)请自改
 \usepackage[font=small,]{caption}   % 使图表标题字号小一号
-\def\abstractname{Summary}          % 摘要标题
+\def\abstractname{Summary Sheet}          % 摘要标题
 
 %==========表格相关===========
 \RequirePackage{longtable,multirow,hhline,tabularx,array}   % 各种基本的表格宏包
@@ -77,8 +77,8 @@
 \ProcessOptions
 \newcommand{\control}{\MCM@control}
 \newcommand{\team}{Team \#\ \MCM@control}
-\newcommand{\contest}{Mathematical Contest in Modeling (MCM) Summary Sheet}
-\newcommand{\notes}{(Attach a copy of this page to each copy of your solution paper.)}
+\newcommand{\contest}{\\ MCM/ICM}
+\newcommand{\notes}{}
 
 %==============书签，插图和交叉引用的设置================
 \RequirePackage{ifpdf}      % 判断是否在运行pdfLaTeX
@@ -159,8 +159,9 @@
 
 %=======摘要生成命令=========
 \def\make@abstract{
-    \par
-    \centerline{\large\bf\abstractname}\vskip5pt\par    %摘要标题
+    \vskip -10pt\par
+    \centerline{\bf\abstractname}\vskip 10pt\par    %摘要标题
+    \centerline{\Large\bf\@title}\vskip 5pt\par    % 插入论文标题，字号可自己修改
     \noindent\usebox\@abstract\par  %摘要正文
     \vskip 10pt %底部留空，若不需要可删去
 }
@@ -193,9 +194,7 @@
 \newcommand{\@problem}[1]{}
 \newcommand{\problem}[1]{\gdef\@problem{#1}}
 \def\makesheet{ %生成sheet头命令的定义
-    \null
-    \vskip 1em % 以上两条命令留出了sheet头和顶部的间距，若不要这个间距（比如摘要放不下）请注释掉这两条命令
-    \begingroup\fontfamily{fvs}\fontseries{m}\selectfont  %字体设置
+    \begingroup\fontsize{10pt}{\baselineskip}\selectfont
     % 左边的列表
     \noindent\begin{tabularx}{0.3\textwidth}{lX}
     \multicolumn{2}{l}{For office use only}\\
@@ -207,10 +206,10 @@
     % 中间的控制号环境
     \begin{minipage}{0.33\textwidth}
         \centering
-        Team Control Number\\[10pt]
-        {\fontsize{30pt}{25pt}\selectfont  \textbf{\MCM@control} }\normalsize\\[10pt]
+        Team Control Number\\
+        {\color{red}\fontsize{14pt}{25pt}\selectfont  \textbf{\MCM@control} }\\[10pt]
         Problem Chosen\\[10pt]
-        {\fontsize{18pt}{\baselineskip}\selectfont \textbf{\@problem}}\normalsize\\
+        {\color{red}\fontsize{24pt}{\baselineskip}\selectfont \textbf{\@problem}}\\
     \end{minipage}\hspace{\fill}
     % 右边的列表
     \begin{tabularx}{0.28\textwidth}{lX}
@@ -224,12 +223,10 @@
     \vskip 1em
     \noindent\rule{\textwidth}{0.5pt}   % 插入一条线
     % 生成顶部标题
+    \normalsize
     \begin{center}
         \textbf{\the\year\  \contest}\\
         \notes
-    \end{center}
-    \begin{center}
-    \Large\bf\@title    % 插入论文标题，字号可自己修改
     \end{center}
     \endgroup
 }
