@@ -1,4 +1,4 @@
-# 一个简洁、易用的美赛LaTeX模板: easymcm
+# 一个简洁、易用的美赛 LaTeX 模板: easymcm
 
 `easymcm.sty`是一个为美国大学生数学建模竞赛（MCM）准备的简易 LaTeX 宏包（文件）。它二次开发自 LaTeX 宏包 `mcmthesis` 于 2013 年发布的 `v5.0` 版本，原作者是[王昭礼](http://www.latexstudio.net)。
 
