@@ -1,22 +1,44 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 	   美赛模板，正文部分		 
-%          PAPER.tex         
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 美赛模板：正文部分
 
-\documentclass[12pt]{article}
+\documentclass[12pt]{article}  % 官方要求字号不小于 12 号，此处选择 12 号字体
 
-% 请在此填写控制号、题号和标题，年份不需要填（自动以当前电脑时间年份为准）
-\usepackage[1234567]{easymcm}\problem{A}   
-\usepackage{palatino} % 这个是COMAP官方杂志采用的字体，如不需要可注释掉，以使用默认字体
+% 本模板不需要填写年份，以当前电脑时间自动生成
+% 请在以下的方括号中填写队伍控制号
+\usepackage[1234567]{easymcm}  % 载入 EasyMCM 模板文件
+\problem{A}  % 请在此处填写题号
+\usepackage{mathptmx}  % 这个是 Times 字体，中规中矩 
+%\usepackage{mathpazo}  % 这个是 COMAP 官方杂志采用的更好看的 Palatino 字体，如需使用可将上面的 mathptmx 宏包注释掉，改用这个
+
 \title{An MCM Paper Made by Team 1234567}  % 标题
 
-% 如您参加的是ICM（即选择了D/E/F题），请使用以下的命令修改Summary Sheet题头
-% \renewcommand{\contest}{Interdisciplinary Contest in Modeling (ICM) Summary Sheet}
+% 如需要修改题头（默认为 MCM/ICM），请使用以下命令（此处修改为 MCM）
+%\renewcommand{\contest}{MCM}
+
+% 文档开始
+\begin{document}
+
+% 此处填写摘要内容
+\begin{abstract}
+    Here is the abstract of your paper.
+
+    Firstly, that is ...
+
+    Secondly, that is ...
+
+    Finally, that is ...
+
+    % 美赛论文中无需注明关键字。若您一定要使用，
+    % 请将以下两行的注释号 '%' 去除，以使其生效
+    % \vspace{5pt}
+    % \textbf{Keywords}: MATLAB, mathematics, LaTeX.
+
+\end{abstract}
+
+\maketitle  % 生成 Summary Sheet
+\tableofcontents  % 生成目录
+
 
 % 正文开始
-\begin{document}
-\input{ABSTRACT.tex}		% 摘要请到ABSTRACT.tex中填写
-
 \section{Introduction}
 \subsection{Problem Background}
 Here is the problem background ...
@@ -43,7 +65,7 @@ We do such things ...
 \subsection{Assumptions}
 
 \subsection{Notations}
-The primary notations used in this paper are listed in \textbf{Table \ref{tb:notation}}.
+The primary notations used in this paper are listed in Table \ref{tb:notation}.
 \begin{table}[!htbp]
 \begin{center}
 \caption{Notations}
@@ -67,6 +89,15 @@ The primary notations used in this paper are listed in \textbf{Table \ref{tb:not
     e^{i\theta}=\cos\theta+i\sin\theta.
 \end{equation}
 
+\subsection{Model 2}
+The results are shown in Figure \ref{fig:result}, where $t$ denotes the time in seconds, and $c$ refers to the concentration of water in the boiler.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.6\textwidth]{water.png}
+\caption{The result of Model 2}\label{fig:result}
+\end{figure}
+
 \section{Strengths and Weaknesses}
 \subsection{Strengths}
 \begin{itemize}
@@ -79,46 +110,50 @@ The primary notations used in this paper are listed in \textbf{Table \ref{tb:not
     \item Only one ...
  \end{itemize}
 
+
+% 以下为信件/备忘录部分，不需要可自行去掉
+% 如有需要可将整个 letter 环境移动到文章开头或中间
+% 请在后一个花括号内填写信件（Letter）或备忘录（Memorandum）标题
+\begin{letter}{Memorandum}
+\begin{flushleft}  % 左对齐环境，无首行缩进
+\textbf{To:} Heishan Yan\\
+\textbf{From:} Team XXXXXXX\\
+\textbf{Date:} October 1st, 2019\\
+\textbf{Subject:} A better choice than MS Word: \LaTeX
+\end{flushleft}
+
+In the memo, we want to introduce you an alternate typesetting program to the prevailing MS Word: \textbf{\LaTeX}. In fact, the history of \LaTeX\ is even longer than that of MS Word. In 1970s, the famous computer scientist Donald Knuth first came out with a typesetting program, which named \TeX\ \ldots
+
+Firstly, \ldots
+
+Secondly, \ldots
+
+Lastly, \ldots
+
+According to all those mentioned above, it is really worth to have a try on \LaTeX! 
+\end{letter}
+
+
+% 参考文献，此处以 MLA 引用格式为例
 \begin{thebibliography}{99}
-\addcontentsline{toc}{section}{References}  %引用部分标题（"Refenrence"）的重命名
-\bibitem{1}Elisa T. Lee, Oscar T. Survival Analysis in Public Health Research. \emph{Go. College of Public Health}, 1997(18):105-134.
-\bibitem{2}Wikipedia: Proportional hazards model. 2017.11.26. \texttt{\\https://en.wikipedia.org/wiki/Proportional\_{}hazards\_{}model}
+\bibitem{1} Einstein, A., Podolsky, B., \& Rosen, N. (1935). Can quantum-mechanical description of physical reality be considered complete?. \emph{Physical review}, 47(10), 777.
+\bibitem{2} \emph{A simple, easy \LaTeX\ template for MCM/ICM: EasyMCM}. (2018) Retrieved December 1, 2019, from\url{https://www.cnblogs.com/xjtu-blacksmith/p/easymcm}
 \end{thebibliography}
 
 
-% ==============以下为附录内容，如您的论文中不需要程序附录请自行删除====================
-\clearpage
-\begin{subappendices}						% 附录环境
-\section*{Apendix: The source codes}		% 附录标题可以自行修改
-\addcontentsline{toc}{section}{Appendix}  	% 将附录内容加入到目录中
+% 以下为附录内容
+% 如您的论文中不需要附录，请自行删除
+\begin{subappendices}  % 附录环境
 
-This MATLAB program is used to calculate the value of variable $a$.
-\begin{lstlisting}[language=Matlab, caption=\texttt{temp.m}]
-a = 0;
-for i = 1:5
-	a = a + 1;
-end
-\end{lstlisting}
+\section{Appendix A: Further on \LaTeX}
+To clarify the importance of using \LaTeX\ in MCM or ICM, several points need to be covered, which are \ldots
 
-This LINGO program is used to search the optimize solution of 0-1 problem.
-\begin{lstlisting}[language=Lingo, caption=\texttt{temp.lg4}]
-model:
-sets:
-WP/1..12/: M, W, X;
-endsets
-data:
-M = 2 5 18 3 2 5 10 4 11 7 14 6;
-W = 5 10 13 4 3 11 13 10 8 16 7 4;
-enddata
-max = @sum(WP:W*X);
-@sum(WP: M * X)<=46;
-@for(WP: @bin(X));
-end
-\end{lstlisting}
+To be more specific, \ldots
+
+All in all, \ldots
+
+Anyway, nobody \textbf{really} needs such appendix \ldots
 
 \end{subappendices}
-% =================================================================================
 
-
-
-\end{document}
+\end{document}  % 结束

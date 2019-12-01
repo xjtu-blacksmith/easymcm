@@ -1,65 +1,52 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
 %% EasyMCM: 一个简洁、易用的美赛模板
 %% Oringinal template (MCMthesis v5.0) by latexstudio, <latexstudio@hotmail.com>
 %% Redeveloped by youjiarui189 (xjtu-blacksmith), <yjr134@163.com>
+%% 目前由西安交大钱院学辅（@qyxf）负责
+%%
 %% v5.00: 注释全部汉化（且添加了大量注释），并将格式改进为符合当前规范的版本
 %% v5.01: 正式改为独立宏包easymcm，改为简洁、清晰、符合美赛规范的格式
-%% v5.02: 支持了7位控制号，改进了若干已知问题，并补充了一些非必需的内容
+%% v5.02: 支持了 7 位控制号，改进了若干已知问题，并补充了一些非必需的内容
+%% v5.1 : 适配 2020 年 Summary sheet 样式，大幅优化代码，更加简明易用
+%% 
 %% 博客地址：http://www.cnblogs.com/xjtu-blacksmith/
-%% GitHub发布页面：https://github.com/xjtu-blacksmith/easymcm/releases
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% GitHub 发布页面：https://github.com/qyxf/easymcm/releases
 
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesPackage{easymcm}[2019/01/21 EasyMCM v5.02]
-\typeout{EasyMCM Package, version 5.02}
+\ProvidesPackage{easymcm}[2019/01/21 EasyMCM v5.1]
+\typeout{EasyMCM Package, version 5.1}
 
-%=========基本宏包==========
-\RequirePackage[a4paper,left=2.5cm,right=2.5cm,top=2.5cm,bottom=1.5cm]{geometry}    %页边距和纸张大小
-\RequirePackage{xcolor}                     % 彩色宏包
-\RequirePackage{fancyhdr,fancybox}          % 设置页眉页脚的宏包
-\RequirePackage{graphicx}                   % 插图宏包
-\RequirePackage{ifthen}                     % 逻辑结构宏包（仅模板文件用到）
-\RequirePackage{lastpage}                   % 获得最后一面页码的宏包（生成"Page X of XX"）
-\RequirePackage{paralist}                   % 用以修改itemize各项间距的宏包
+% 基本宏包 
+\RequirePackage[a4paper,margin=2.5cm,bottom=1.5cm]{geometry}  % 页边距和纸张大小
+\RequirePackage{fancyhdr,fancybox}  % 设置页眉页脚
+\RequirePackage{graphicx}  % 插图
+\RequirePackage{ifthen}  % 逻辑结构
+\RequirePackage{lastpage}  % 生成"Page X of XX"
+\RequirePackage{paralist}  % 修改 itemize 各项间距
+\RequirePackage{indentfirst}  % 全文首行缩进
+\RequirePackage[toc,page,title,titletoc,header]{appendix}  % 附录定制
 
-%=========附录代码==========
-\RequirePackage{listings}       % 代码环境宏包
-\RequirePackage[toc,page,title,titletoc,header]{appendix} % 附录制作宏包
-\lstset{% 代码抄录环境的设置
-	tabsize=4,%
-    frame=lines,%
-	basicstyle={\footnotesize\ttfamily},%
-    keywordstyle=\bfseries,%
-    commentstyle=\color{gray},%
-    aboveskip=10pt,%
-    belowskip=2pt,%
-}
-
-%========设置上下文间距========
+% 设置上下文间距
 \setlength{\belowcaptionskip}{4pt}
 \setlength{\abovecaptionskip}{4pt}
 
-%==========数学公式===========
-\RequirePackage{amsfonts,amsmath,amssymb} % AMSLaTeX符号、公式宏包
+% 数学公式
+\RequirePackage{amsfonts,amsmath,amssymb} % AMSLaTeX 符号、公式
 
-%===========目录==============
-\usepackage{titlesec}
-\usepackage{titletoc}
-\setcounter{tocdepth}{3}    		% 目录显示到subsubsection(3)级别,若只需到subsection(2)请自改
-\usepackage[font=small,]{caption}   % 使图表标题字号小一号
-\def\abstractname{Summary Sheet}          % 摘要标题
+% 目录
+\RequirePackage{titlesec,titletoc}
+\setcounter{tocdepth}{3} % 目录显示到 subsubsection(3) 级别,若只需到 subsection(2) 请自改
+\RequirePackage[font=small]{caption}  % 使图表标题字号小一号
+\renewcommand\abstractname{Summary}  % 摘要标题
 
-%==========表格相关===========
-\RequirePackage{longtable,multirow,hhline,tabularx,array}   % 各种基本的表格宏包
-\RequirePackage{flafter}    		% 引用该宏包可避免图片在引用它的正文之前出现
-\RequirePackage{pifont,calc}    	% 前者实现了\ding{}命令（可自己百度），后者是底层常用宏包
-\RequirePackage{colortbl,booktabs}  % 书签生成
+% 表格相关
+\RequirePackage{longtable,multirow,array}  % 各种基本的表格宏包
+\RequirePackage{flafter}  % 引用该宏包可避免图片在引用它的正文之前出现
+\RequirePackage{booktabs}  % 三线表宏包
 
-%==========字体相关===========
-\RequirePackage[T1]{fontenc}    	% 允许使用欧洲字体（西里尔字母，拉丁字母，希腊字母等）
-\RequirePackage[scaled]{berasans}   % 一个无衬线字体（在summary sheet顶部有用）
-\definecolor{grey}{rgb}{0.91,0.91,0.91} % 定义灰色
-\RequirePackage{url}            	% 网址宏包，以下命令使得网址能自动换行
+% 字体相关
+\RequirePackage[T1]{fontenc}  % 开启拓展区正文字体
+\RequirePackage{url}  % 网址宏包，以下命令使得网址能自动换行
 \def\UrlBreaks{\do\A\do\B\do\C\do\D\do\E\do\F\do\G\do\H\do\I\do\J
 \do\K\do\L\do\M\do\N\do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V
 \do\W\do\X\do\Y\do\Z\do\[\do\\\do\]\do\^\do\_\do\`\do\a\do\b
@@ -68,121 +55,119 @@
 \do\.\do\@\do\\\do\/\do\!\do\_\do\|\do\;\do\>\do\]\do\)\do\,
 \do\?\do\'\do+\do\=\do\#}
 
-%==========基本参数===========
+% 基本参数
 \setlength{\headheight}{15pt}
-\newcommand{\MCM@control}{0000000} % 0000000只是一个初值，其值在引用宏包时由用户给定
+\newcommand{\MCM@control}{0000000}  % 队伍控制号，默认为 0000000
 \DeclareOption*{\edef\MCM@control{\CurrentOption}}
-
-% 生成一些所需的参数（控制号，队伍名，页眉信息）
 \ProcessOptions
 \newcommand{\control}{\MCM@control}
 \newcommand{\team}{Team \#\ \MCM@control}
-\newcommand{\contest}{\\ MCM/ICM}
-\newcommand{\notes}{}
+\newcommand{\contest}{MCM/ICM}
 
-%==============书签，插图和交叉引用的设置================
-\RequirePackage{ifpdf}      % 判断是否在运行pdfLaTeX
+% 书签，插图和交叉引用的设置
+\RequirePackage{ifpdf}      % 判断是否在运行 pdftex
 \ifpdf%
-\RequirePackage{epstopdf}   % pdfLaTeX不能使用eps图片，用该宏包转成pdf后使用
+\RequirePackage{epstopdf}   % pdftex 不能使用 eps 图片，用该宏包转成 pdf 后使用
 \DeclareGraphicsExtensions{.pdf,.jpg,.jpeg,.png}    % 允许的图片类型
-\RequirePackage[bookmarks=true,%
-    linkcolor=black,%
-    citecolor=black,%
-    colorlinks=true, % 注释掉此项则交叉引用为彩色边框(将colorlinks和pdfborder同时注释掉)
-    %pdfborder=1,     % 注释掉此项则交叉引用为彩色边框（提示：不好看）
-    linkcolor=black,%
-    citecolor=black,%
+\RequirePackage[linkcolor=black,
+    citecolor=black,
+    colorlinks=true,
+    pdfborder=1,
+    linkcolor=black,
+    citecolor=black,
     urlcolor=black]{hyperref}
-\else%
-\DeclareGraphicsExtensions{.eps,.ps}    %不需要转换eps图片格式
-\ifxetex
-    \RequirePackage[xetex,% 运行xetex
-        pdfstartview=FitH,%
-        CJKbookmarks=true,%
-        bookmarksnumbered=true,%
-        bookmarksopen=true,%
-        colorlinks=true, % 注释掉此项则交叉引用为彩色边框(将colorlinks和pdfborder同时注释掉)
-        pdfborder=001,% 注释掉此项则交叉引用为彩色边框
-        linkcolor=black,%
-        citecolor=black,%
-        urlcolor=black]{hyperref}
-\else
-    \RequirePackage[dvipdfm,  % 运行其他编译引擎
-        pdfstartview=FitH,%
-        CJKbookmarks=true,%
-        bookmarksnumbered=true,%
-        bookmarksopen=true,%
-        colorlinks=true,% 注释掉此项则交叉引用为彩色边框(将colorlinks和pdfborder同时注释掉)
-        pdfborder=001,% 注释掉此项则交叉引用为彩色边框
-        linkcolor=black,%
-        citecolor=black,%
-        urlcolor=black]{hyperref}
+\else\DeclareGraphicsExtensions{.eps,.ps}  % 不需要转换 eps 图片格式
+\ifxetex\RequirePackage[xetex,  % 运行 xetex
+    pdfstartview=FitH,
+    bookmarksnumbered=true,
+    bookmarksopen=true,
+    colorlinks=true,
+    pdfborder=001,
+    linkcolor=black,
+    citecolor=black,
+    urlcolor=black]{hyperref}
+\else\RequirePackage[dvipdfm,  % 运行其他编译引擎（如 luatex）
+    pdfstartview=FitH,
+    bookmarksnumbered=true,
+    bookmarksopen=true,
+    colorlinks=true,
+    pdfborder=001,
+    linkcolor=black,
+    citecolor=black,
+    urlcolor=black]{hyperref}
 \fi\fi
 
-%===使整篇文章的首段都有缩进===
-\let\@afterindentfalse\@afterindenttrue\@afterindenttrue
-
-%=========目录的制作==========
+% 目录生成
 \renewcommand\tableofcontents{%
 \centerline{\normalfont\Large\bfseries\contentsname%
 \@mkboth{%
 \MakeUppercase\contentsname}{\MakeUppercase\contentsname}}%
 \vskip 3ex%
 \@starttoc{toc}%
-}
+\thispagestyle{empty}
+\clearpage
+\pagestyle{fancy}
+\setlength\parskip{0.8\baselineskip}}  % 调整段间距
 
-
-% 以下设置使得一页上最多有六个浮动对象（图、表），且顶部最多三个，底部最多三个。可自行修改参数
+% 以下设置使得一页上最多有六个浮动对象（图、表）
+% 且顶部最多三个，底部最多三个
+% 可自行修改参数
 \setcounter{totalnumber}{6}
 \setcounter{topnumber}{3}
 \setcounter{bottomnumber}{3}
 
-% 很多人发现缺省的浮动参数过于严格了。下面的命令
+% 很多人发现缺省的浮动参数过于严格了
+% 下面的命令
 \renewcommand{\textfraction}{0.15}
 \renewcommand{\topfraction}{0.85}
 \renewcommand{\bottomfraction}{0.65}
 \renewcommand{\floatpagefraction}{0.60}
-% 将浮动参数重新设置为更宽松的值。---选自《LaTeX2e插图指南》
+% 将浮动参数重新设置为更宽松的值。
+% ---选自《LaTeX2e插图指南》
 
-%====summarysheet页的生成====
-\def\@maketitle{%
+% Summary Sheet 生成
+\def\@maketitle{
 	\makesheet%
-	\make@abstract%
-}
+	\make@abstract
+    \pagenumbering{gobble}
+    \pagestyle{empty}
+    \newpage
+    \pagenumbering{arabic}
+    \setcounter{page}{1}}
 
-%========abstract环境的设置==========
-\def\@abstract{}
-\newbox\@abstract   %生成环境
-\setbox\@abstract\hbox{}
-\long\def\abstract{\bgroup\global\setbox\@abstract\vbox\bgroup\hsize\textwidth} % 一系列设置，一般不需要再改
+% abstract 环境的设置
+\def\@abstract{}  % 创建空的摘要宏
+\newbox\@abstract   % 将摘要创建为盒子
+\setbox\@abstract\hbox{}  % 盒子置空
+\long\def\abstract{\bgroup\global\setbox\@abstract\vbox\bgroup\hsize\textwidth}
 \def\endabstract{\egroup\egroup}
-
-%=======摘要生成命令=========
 \def\make@abstract{
     \vskip -10pt\par
-    \centerline{\bf\abstractname}\vskip 10pt\par    %摘要标题
-    \centerline{\Large\bf\@title}\vskip 5pt\par    % 插入论文标题，字号可自己修改
-    \noindent\usebox\@abstract\par  %摘要正文
-    \vskip 10pt %底部留空，若不需要可删去
-}
+    {\centering\Large\bfseries\@title\vskip1ex}\par  % 插入论文标题，字号可自己修改
+    {\centering\bfseries\abstractname\vskip1.5ex}\par  %摘要标题
+    \noindent\usebox\@abstract\par  % 摘要正文
+    \vskip 10pt}  % 底部留空，若不需要可删去
 
-% 图表标题的名称，已经合规不需要再修改
+
+% 图表标题名称
 \renewcommand{\figurename}{Figure}
 \renewcommand{\tablename}{Table}
-\renewcommand{\lstlistingname}{Program}
 
-% 自动识别的图表文件夹，若使用这些名字命名文件夹，则引用图片路径时只需填文件名即可
+% 以下定义了自动识别的图表文件夹
+% 若使用这些名字命名文件夹
+% 则引用图片路径时只需填文件名即可
 \graphicspath{{./}{./img/}{./fig/}{./image/}{./figure/}{./picture/}}
 
-% 定理环境的声明，事实上大部分论文中用不到，但仍保留以供使用
-\newtheorem{Theorem}{Theorem}[section]%
-\newtheorem{Lemma}[Theorem]{Lemma}%
-\newtheorem{Corollary}[Theorem]{Corollary}%
-\newtheorem{Proposition}[Theorem]{Proposition}%
-\newtheorem{Definition}[Theorem]{Definition}%
-\newtheorem{Example}[Theorem]{Example}%
+% 定理环境声明
+% 事实上大部分论文中用不到，但仍保留以供使用
+\newtheorem{Theorem}{Theorem}[section]
+\newtheorem{Lemma}[Theorem]{Lemma}
+\newtheorem{Corollary}[Theorem]{Corollary}
+\newtheorem{Proposition}[Theorem]{Proposition}
+\newtheorem{Definition}[Theorem]{Definition}
+\newtheorem{Example}[Theorem]{Example}
 
-%=====页眉页脚设置=====
+% 页眉页脚设置
 \lhead{\small \team}
 \chead{}
 \rhead{\small Page \thepage\ of \pageref{LastPage}}
@@ -190,45 +175,51 @@
 \cfoot{}
 \rfoot{}
 
-% COMAP要求的summary sheet标题，注意每年比赛时有可能有小调整，请以官网发布的样式为准自行做小的修改！
+% COMAP 要求的 Summary Sheet 标题（2020）
+% 注意每年比赛时有可能有小调整
+% 请以官网发布的样式为准自行做小的修改！
 \newcommand{\@problem}[1]{}
 \newcommand{\problem}[1]{\gdef\@problem{#1}}
-\def\makesheet{ %生成sheet头命令的定义
-    \begingroup\fontsize{10pt}{\baselineskip}\selectfont
-    % 左边的列表
-    \noindent\begin{tabularx}{0.3\textwidth}{lX}
-    \multicolumn{2}{l}{For office use only}\\
-        T1&\rule{3cm}{0.5pt}\\
-        T2&\rule{3cm}{0.5pt}\\
-        T3&\rule{3cm}{0.5pt}\\
-        T4&\rule{3cm}{0.5pt}\\
-    \end{tabularx}\hspace{\fill}
-    % 中间的控制号环境
-    \begin{minipage}{0.33\textwidth}
-        \centering
-        Team Control Number\\
-        {\color{red}\fontsize{14pt}{25pt}\selectfont  \textbf{\MCM@control} }\\[10pt]
-        Problem Chosen\\[10pt]
-        {\color{red}\fontsize{24pt}{\baselineskip}\selectfont \textbf{\@problem}}\\
-    \end{minipage}\hspace{\fill}
-    % 右边的列表
-    \begin{tabularx}{0.28\textwidth}{lX}
-        \multicolumn{2}{l}{For office use only}\\
-        F1&\rule{3cm}{0.5pt}\\
-        F2&\rule{3cm}{0.5pt}\\
-        F3&\rule{3cm}{0.5pt}\\
-        F4&\rule{3cm}{0.5pt}\\
-    \end{tabularx}
-    \vspace*{1ex}   % 留出一点空
-    \vskip 1em
-    \noindent\rule{\textwidth}{0.5pt}   % 插入一条线
-    % 生成顶部标题
-    \normalsize
+\newcommand{\makesheet}{ %生成sheet头命令的定义
+    \null%
+    \vspace*{-5pc}%
     \begin{center}
-        \textbf{\the\year\  \contest}\\
-        \notes
-    \end{center}
+    \begingroup
+    \setlength{\parindent}{0pt}
+    \begin{minipage}[t]{0.33\linewidth}
+        \centering
+        \textbf{Problem Chosen}\\
+        \LARGE\@problem
+        \end{minipage}%
+        \begin{minipage}[t]{0.34\linewidth}
+        \centering
+        \bfseries\the\year\\\contest\\{Summary Sheet}
+        \end{minipage}%
+        \begin{minipage}[t]{0.33\linewidth}
+        \centering
+        \textbf{Team Control Number}\\
+        \LARGE\MCM@control\\[1.8pc]
+    \end{minipage}\par
+    \vskip1ex
+    \rule{\linewidth}{1.5pt}\par
     \endgroup
-}
-\pagestyle{fancy}
+    \vskip 10pt%
+    \end{center}}
+
+% 信件/备忘录环境
+\newenvironment{letter}[1]{\refstepcounter{section}\addtocounter{section}{-1}
+\section*{#1}\addcontentsline{toc}{section}{#1}}{}
+
+% 快乐 etoolbox
+\RequirePackage{etoolbox}
+\AtBeginEnvironment{abstract}{\setlength\parskip{1ex}}
+\BeforeBeginEnvironment{thebibliography}{
+    \refstepcounter{section}
+    \addcontentsline{toc}{section}{References}}
+\BeforeBeginEnvironment{subappendices}{
+    \clearpage
+    \setcounter{secnumdepth}{-1}
+    \refstepcounter{section}}
+\BeforeBeginEnvironment{letter}{\clearpage}
+
 \endinput
