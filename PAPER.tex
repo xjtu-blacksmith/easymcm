@@ -6,8 +6,8 @@
 % 请在以下的方括号中填写队伍控制号
 \usepackage[1234567]{easymcm}  % 载入 EasyMCM 模板文件
 \problem{A}  % 请在此处填写题号
-\usepackage{mathptmx}  % 这个是 Times 字体，中规中矩 
-%\usepackage{mathpazo}  % 这个是 COMAP 官方杂志采用的更好看的 Palatino 字体，如需使用可将上面的 mathptmx 宏包注释掉，改用这个
+\usepackage{mathptmx}  % 这是 Times 字体，中规中矩 
+%\usepackage{mathpazo}  % 这是 COMAP 官方杂志采用的更好看的 Palatino 字体，可替代以上的 mathptmx 宏包
 
 \title{An MCM Paper Made by Team 1234567}  % 标题
 
@@ -85,8 +85,9 @@ The primary notations used in this paper are listed in Table \ref{tb:notation}.
 \section{The Models}
 \subsection{Model 1}
 \subsubsection{Detail 1 about Model 1}
-\begin{equation}
-    e^{i\theta}=\cos\theta+i\sin\theta.
+The detail can be described by equation \eqref{eq:heat}:
+\begin{equation}\label{eq:heat}
+\frac{\partial u}{\partial t} - a^2 \left( \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial z^2} \right) = f(x, y, z, t)
 \end{equation}
 
 \subsection{Model 2}
@@ -137,7 +138,7 @@ According to all those mentioned above, it is really worth to have a try on \LaT
 % 参考文献，此处以 MLA 引用格式为例
 \begin{thebibliography}{99}
 \bibitem{1} Einstein, A., Podolsky, B., \& Rosen, N. (1935). Can quantum-mechanical description of physical reality be considered complete?. \emph{Physical review}, 47(10), 777.
-\bibitem{2} \emph{A simple, easy \LaTeX\ template for MCM/ICM: EasyMCM}. (2018) Retrieved December 1, 2019, from\url{https://www.cnblogs.com/xjtu-blacksmith/p/easymcm}
+\bibitem{2} \emph{A simple, easy \LaTeX\ template for MCM/ICM: EasyMCM}. (2018). Retrieved December 1, 2019, from\url{https://www.cnblogs.com/xjtu-blacksmith/p/easymcm.html}
 \end{thebibliography}
 
 
