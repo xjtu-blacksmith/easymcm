@@ -28,6 +28,8 @@
 
 若您使用 CTeX 套装，建议您在[发布](https://github.com/qyxf/easymcm/releases)页面上下载带有 ANSI 字样的文件，否则文件中的中文注释将在 CTeX 套装的 WinEdt 编辑器中显示为乱码；反之，若您使用的是比较新的发行版本，请不要使用带有 ANSI 字样的版本。
 
+如您身处比较流畅的国际网络环境中（例如，能够访问 Google），推荐您使用 Overleaf 在线编译，以减少各类错误的发生。下载本模板的 `zip` 压缩包，并上传至 Overleaf 中作为项目，即可快速编辑、编译。
+
 ## 联系作者
 
 本模板目前由西安交大钱院学辅（[@qyxf](https://github.com/qyxf/)）负责，主要负责人仍然是[黑山雁](https://github.com/xjtu-blacksmith)。若在使用过程中出现任何问题，可通过以下方式联系我们：
