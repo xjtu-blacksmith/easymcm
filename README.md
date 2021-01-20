@@ -1,7 +1,7 @@
 # 一个简洁、易用的美赛 LaTeX 模板: easymcm
 
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/qyxf/easymcm)
-![GitHub All Releases](https://img.shields.io/github/downloads/qyxf/easymcm/total)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/xjtu-blacksmith/easymcm)](https://github.com/xjtu-blacksmith/easymcm/releases)
+![GitHub All Releases](https://img.shields.io/github/downloads/xjtu-blacksmith/easymcm/total)
 
 `easymcm.sty`是一个为美国大学生数学建模竞赛（MCM）准备的简易 LaTeX 宏包（文件）。它二次开发自 LaTeX 宏包 `mcmthesis` 于 2013 年发布的 `v5.0` 版本，原作者是[王昭礼](http://www.latexstudio.net)。
 
@@ -9,7 +9,15 @@
 
 关于 `easymcm` 的说明及其来由，详见原作者[黑山雁的博客](https://www.cnblogs.com/xjtu-blacksmith/p/9737960.html)。2019 年时，easymcm 宏包由[黑山雁](https://github.com/xjtu-blacksmith)移交给[钱院学辅](https://github.com/qyxf)开发；到 2020 年，因若干原因，本模板再次移回到黑山雁个人名下。
 
-开发和分享此宏包，并无功利目的，仅是为了方便初学者的使用；基于此目的，作者不会将该宏包正式发布到 CTAN 之上，仅供国内用户学习使用。
+## 发布渠道
+
+[![GitHub Repo stars](https://img.shields.io/github/stars/xjtu-blacksmith/easymcm?style=social)](https://github.com/xjtu-blacksmith/easymcm)
+[![Gitee Repo stars](https://gitee.com/xjtu-blacksmith/easymcm/badge/star.svg?theme=dark)](https://gitee.com/xjtu-blacksmith/easymcm/stargazers)
+
+开发和分享此宏包，并无功利目的，仅是为了方便初学者的使用；基于此目的，作者不会将该宏包发布到 CTAN 之上，仅供国内用户学习使用。
+
+- GitHub（主要分发平台）：<https://github.com/xjtu-blacksmith/easymcm>
+- Gitee（国内镜像）：<https://gitee.com/xjtu-blacksmith.cn/easymcm>
 
 ## 使用说明
 
@@ -36,4 +44,4 @@
 
 - 在本模板的[讨论页面](https://github.com/xjtu-blacksmith/easymcm/discussions)发布帖子（推荐，但需要注册 GitHub 账号）；
 - 在作者的[博客页面](https://www.cnblogs.com/xjtu-blacksmith/p/easymcm.html)发布评论（不推荐，需要注册博客园账号）；
-- 通过作者的邮箱 yjr134@163.com 联系作者（不推荐，且作者可能不会回复你）。
+- 通过作者的邮箱 yjr134@163.com 联系作者（不推荐，作者很可能不会回复你）。
