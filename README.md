@@ -17,7 +17,7 @@
 开发和分享此宏包，并无功利目的，仅是为了方便初学者的使用；基于此目的，作者不会将该宏包发布到 CTAN 之上，仅供国内用户学习使用。
 
 - GitHub（主要分发平台）：<https://github.com/xjtu-blacksmith/easymcm>
-- Gitee（国内镜像）：<https://gitee.com/xjtu-blacksmith.cn/easymcm>
+- Gitee（国内镜像）：<https://gitee.com/xjtu-blacksmith/easymcm>
 
 ## 使用说明
 
