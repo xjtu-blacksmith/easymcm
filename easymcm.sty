@@ -201,11 +201,8 @@
 \def\@maketitle{
 	\makesheet%
 	\make@abstract
-    \pagenumbering{gobble}
     \pagestyle{empty}
-    \newpage
-    \pagenumbering{arabic}
-    \setcounter{page}{1}}
+    \newpage}
 
 % 目录生成
 \renewcommand\tableofcontents{%
