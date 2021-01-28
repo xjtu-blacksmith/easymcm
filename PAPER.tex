@@ -91,12 +91,33 @@ The detail can be described by equation \eqref{eq:heat}:
 \end{equation}
 
 \subsection{Model 2}
+\subsubsection{Conclusion of Model 2}
 The results are shown in Figure \ref{fig:result}, where $t$ denotes the time in seconds, and $c$ refers to the concentration of water in the boiler.
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.6\textwidth]{water.png}
 \caption{The result of Model 2}\label{fig:result}
+\end{figure}
+
+\subsubsection{Commetary on Model 2}
+
+Figure \ref{fig:subfigures} gives an example of subfigures. Figure \ref{subfig:left} is on the left, and Figure \ref{subfig:right} is on the right.
+
+% 子图（多图并列）示例，更多用法请参考 subfigure 宏包文档
+% 如果您只希望几张图并列，不需要额外的 caption，那么在 figure 环境中
+% 连续插入总宽度不超过 \textwidth 的多个 \includegraphics 命令即可
+\begin{figure}[htbp]
+\centering
+\begin{subfigure}[b]{.4\textwidth}
+\includegraphics[width=\textwidth]{water.png}
+\caption{Image on the left}\label{subfig:left}
+\end{subfigure}
+\begin{subfigure}[b]{.4\textwidth}
+\includegraphics[width=\textwidth]{water.png}
+\caption{Image on the right}\label{subfig:right}
+\end{subfigure}
+\caption{Two images}\label{fig:subfigures}
 \end{figure}
 
 \section{Strengths and Weaknesses}
