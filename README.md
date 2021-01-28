@@ -3,11 +3,11 @@
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/xjtu-blacksmith/easymcm)](https://github.com/xjtu-blacksmith/easymcm/releases)
 ![GitHub All Releases](https://img.shields.io/github/downloads/xjtu-blacksmith/easymcm/total)
 
-`easymcm.sty`是一个为美国大学生数学建模竞赛（MCM）准备的简易 LaTeX 宏包（文件）。它二次开发自 LaTeX 宏包 `mcmthesis` 于 2013 年发布的 `v5.0` 版本，原作者是[王昭礼](http://www.latexstudio.net)。
+easymcm 是一个为美国大学生数学建模竞赛（MCM）准备的简易 LaTeX 模板。它二次开发自 LaTeX 宏包 `mcmthesis` 于 2013 年发布的 `v5.0` 版本，原作者是[王昭礼](http://www.latexstudio.net)。
 
-> 事实上，`easymcm` 与 `mcmthesis` 的最新版本（`v6.2`）并无关联，后者为一个文档类（documentclass）而非一个宏包（package）。该文档类现由 [Liam0205](https://github.com/Liam0205/mcmthesis/releases/) 维护。
+> 事实上，`easymcm` 与另一美赛 `mcmthesis` 的最新版本并无关联，后者为一个文档类（class）而非一个宏包（package）。该文档类现由 [Liam0205](https://github.com/Liam0205/mcmthesis/releases/) 维护。
 
-关于 `easymcm` 的说明及其来由，详见原作者[黑山雁的博客](https://www.cnblogs.com/xjtu-blacksmith/p/9737960.html)。2019 年时，easymcm 宏包由[黑山雁](https://github.com/xjtu-blacksmith)移交给[钱院学辅](https://github.com/qyxf)开发；到 2020 年，因若干原因，本模板再次移回到黑山雁个人名下。
+关于 `easymcm` 的说明及其来由，详见原作者[黑山雁的博客](https://www.cnblogs.com/xjtu-blacksmith/p/9737960.html)。2019 年时，easymcm 宏包由[黑山雁](https://github.com/xjtu-blacksmith)移交给[钱院学辅](https://github.com/qyxf)组织管理；到 2020 年，因若干原因，本模板再次移回到黑山雁个人名下。
 
 ## 发布渠道
 
@@ -34,7 +34,7 @@
 
 本份模板允许使用 `pdftex`、`xetex`、`luatex` 等各个通行引擎编译，兼容老旧的 CTeX 套装。
 
-若您使用 CTeX 套装，建议您在[发布](https://github.com/qyxf/easymcm/releases)页面上下载带有 ANSI 字样的文件，否则文件中的中文注释将在 CTeX 套装的 WinEdt 编辑器中显示为乱码；反之，若您使用的是比较新的发行版本，请不要使用带有 ANSI 字样的版本。
+若您使用 CTeX 套装，建议您在[发布](https://github.com/qyxf/easymcm/releases)页面上下载**带有 ANSI 字样**的文件，否则文件中的中文注释将在 CTeX 套装的 WinEdt 编辑器中显示为乱码；反之，若您使用的是比较新的发行版本，请不要使用带有 ANSI 字样的版本。
 
 如您身处比较流畅的国际网络环境中（例如，能够访问 Google），推荐您使用 [Overleaf](https://overleaf.com) 在线编译，以减少各类错误的发生。下载本模板的 `zip` 压缩包，并上传至 Overleaf 中作为项目，即可快速编辑、编译。
 
