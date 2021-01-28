@@ -143,6 +143,19 @@
 \renewcommand{\theHsection}{\theprefix.\thesection}  % 针对 hyperref
 \newenvironment{letter}[1]{\refstepcounter{section}\addtocounter{section}{-1}\section*{#1}\addcontentsline{toc}{section}{#1}}{\stepcounter{prefix}}
 
+% 附录代码环境
+\RequirePackage{listings}
+\RequirePackage{newtxtt}  % 代码字体
+\lstset{
+    showspaces = false,
+    showstringspaces = false,
+    showtabs = false,
+    title = {\raggedright\bfseries\ttfamily\lstname\vspace{1pt}},
+    frame = shadowbox,
+    basicstyle = {\small\ttfamily},
+    keywordstyle = {\bfseries},
+    tabsize = 4}
+
 % 快乐 etoolbox
 \RequirePackage{etoolbox}  % 减轻正文复杂度
 \AtBeginEnvironment{abstract}{\setlength\parskip{1ex}}  % 摘要中增加段距

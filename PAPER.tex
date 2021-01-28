@@ -155,6 +155,41 @@ All in all, \ldots
 
 Anyway, nobody \textbf{really} needs such appendix \ldots
 
-\end{subappendices}
+\section{Appendix B: Program Codes}
+Here are the program codes we used in our research.
+
+% 代码环境示例三则
+% 如您的论文不需要展示代码，请删除
+% 更多用法，请参考 listings 宏包文档
+
+% Python 代码示例
+\begin{lstlisting}[language=Python, name={test.py}]
+# Python code example
+for i in range(10):
+    print('Hello, world!')
+\end{lstlisting}
+
+% MATLAB 代码示例
+\begin{lstlisting}[language=MATLAB, name={test.m}]
+% MATLAB code example
+for i = 1:10
+    disp("hello, world!");
+end
+\end{lstlisting}
+
+% C++ 代码示例
+\begin{lstlisting}[language=C++, name={test.cpp}]
+// C++ code example
+#include <iostream>
+using namespace std;
+
+int main() {
+    for (int i = 0; i < 10; i++)
+        cout << "hello, world" << endl;
+    return 0;
+}
+\end{lstlisting}
+
+\end{subappendices}  % 附录内容结束
 
 \end{document}  % 结束
