@@ -1,39 +1,39 @@
 %%
-%% EasyMCM: ä¸€ä¸ªç®€æ´ã€æ˜“ç”¨çš„ç¾èµ›æ¨¡æ¿
+%% EasyMCM: Ò»¸ö¼ò½à¡¢Ò×ÓÃµÄÃÀÈüÄ£°å
 %% Oringinal template (MCMthesis v5.0) by latexstudio, <latexstudio@hotmail.com>
 %% Redeveloped by Heishan Yan (xjtu-blacksmith), <yjr134@126.com>
-%% ç›®å‰ç”±é»‘å±±é›ï¼ˆ@xjtu-blacksmithï¼‰ç»´æŠ¤
+%% Ä¿Ç°ÓÉºÚÉ½Ñã£¨@xjtu-blacksmith£©Î¬»¤
 %%
-%% v5.00: æ³¨é‡Šå…¨éƒ¨æ±‰åŒ–ï¼ˆä¸”æ·»åŠ äº†å¤§é‡æ³¨é‡Šï¼‰ï¼Œå¹¶å°†æ ¼å¼æ”¹è¿›ä¸ºç¬¦åˆå½“å‰è§„èŒƒçš„ç‰ˆæœ¬
-%% v5.01: æ­£å¼æ”¹ä¸ºç‹¬ç«‹å®åŒ… EasyMCMï¼Œæ”¹ä¸ºç®€æ´ã€æ¸…æ™°ã€ç¬¦åˆç¾èµ›è§„èŒƒçš„æ ¼å¼
-%% v5.02: æ”¯æŒäº† 7 ä½æ§åˆ¶å·ï¼Œæ”¹è¿›äº†è‹¥å¹²å·²çŸ¥é—®é¢˜ï¼Œå¹¶è¡¥å……äº†ä¸€äº›éå¿…éœ€çš„å†…å®¹
-%% v5.1 : é€‚é… 2020 å¹´ Summary sheet æ ·å¼ï¼Œå¤§å¹…ä¼˜åŒ–ä»£ç ï¼Œæ›´åŠ ç®€æ˜æ˜“ç”¨
-%% v5.2 : é€‚é… 2021 å¹´ Summary sheet æ ·å¼ï¼Œæ›´æ­£äº†é¡µç ï¼Œå¹¶å¢åŠ ä¸€äº›ä¾‹å­
+%% v5.00: ×¢ÊÍÈ«²¿ºº»¯£¨ÇÒÌí¼ÓÁË´óÁ¿×¢ÊÍ£©£¬²¢½«¸ñÊ½¸Ä½øÎª·ûºÏµ±Ç°¹æ·¶µÄ°æ±¾
+%% v5.01: ÕıÊ½¸ÄÎª¶ÀÁ¢ºê°ü EasyMCM£¬¸ÄÎª¼ò½à¡¢ÇåÎú¡¢·ûºÏÃÀÈü¹æ·¶µÄ¸ñÊ½
+%% v5.02: Ö§³ÖÁË 7 Î»¿ØÖÆºÅ£¬¸Ä½øÁËÈô¸ÉÒÑÖªÎÊÌâ£¬²¢²¹³äÁËÒ»Ğ©·Ç±ØĞèµÄÄÚÈİ
+%% v5.1 : ÊÊÅä 2020 Äê Summary sheet ÑùÊ½£¬´ó·ùÓÅ»¯´úÂë£¬¸ü¼Ó¼òÃ÷Ò×ÓÃ
+%% v5.2 : ÊÊÅä 2021 Äê Summary sheet ÑùÊ½£¬¸üÕıÁËÒ³Âë£¬²¢Ôö¼ÓÒ»Ğ©Àı×Ó
 %% 
-%% ä¸ªäººç½‘ç«™ï¼šhttps://xjtu-blacksmith.cn
-%% æˆ‘çš„åšå®¢å›­ï¼šhttps://www.cnblogs.com/xjtu-blacksmith/
-%% GitHub å‘å¸ƒé¡µé¢ï¼šhttps://github.com/xjtu-blacksmith/easymcm/releases
-%% Gitee å‘å¸ƒé¡µé¢ï¼šhttps://gitee.com/xjtu-blacksmith/easymcm/releases
+%% ¸öÈËÍøÕ¾£ºhttps://xjtu-blacksmith.cn
+%% ÎÒµÄ²©¿ÍÔ°£ºhttps://www.cnblogs.com/xjtu-blacksmith/
+%% GitHub ·¢²¼Ò³Ãæ£ºhttps://github.com/xjtu-blacksmith/easymcm/releases
+%% Gitee ·¢²¼Ò³Ãæ£ºhttps://gitee.com/xjtu-blacksmith/easymcm/releases
 %%
 
 \NeedsTeXFormat{LaTeX2e}[2005/12/01]
 \ProvidesPackage{easymcm}[2021/01/28 EasyMCM v5.2]
 \typeout{EasyMCM Package, version 5.2}
 
-% åŸºæœ¬å®åŒ… 
-\RequirePackage[a4paper,margin=2.5cm,bottom=1.5cm]{geometry}  % é¡µè¾¹è·å’Œçº¸å¼ å¤§å°
-\RequirePackage{fancyhdr,fancybox}  % è®¾ç½®é¡µçœ‰é¡µè„š
-\RequirePackage{ifthen}  % é€»è¾‘ç»“æ„
-\RequirePackage{lastpage}  % ç”Ÿæˆ"Page X of XX"
-\RequirePackage{paralist}  % ä¿®æ”¹ itemize å„é¡¹é—´è·
-\RequirePackage{indentfirst}  % å…¨æ–‡é¦–è¡Œç¼©è¿›
-\RequirePackage[toc,page,title,titletoc,header]{appendix}  % é™„å½•å®šåˆ¶
+% »ù±¾ºê°ü 
+\RequirePackage[a4paper,margin=2.5cm,bottom=1.5cm]{geometry}  % Ò³±ß¾àºÍÖ½ÕÅ´óĞ¡
+\RequirePackage{fancyhdr,fancybox}  % ÉèÖÃÒ³Ã¼Ò³½Å
+\RequirePackage{ifthen}  % Âß¼­½á¹¹
+\RequirePackage{lastpage}  % Éú³É"Page X of XX"
+\RequirePackage{paralist}  % ĞŞ¸Ä itemize ¸÷Ïî¼ä¾à
+\RequirePackage{indentfirst}  % È«ÎÄÊ×ĞĞËõ½ø
+\RequirePackage[toc,page,title,titletoc,header]{appendix}  % ¸½Â¼¶¨ÖÆ
 
-% æ•°å­¦å…¬å¼
-\RequirePackage{amsfonts,amsmath,amssymb} % AMS-LaTeX ç¬¦å·ã€å…¬å¼
+% ÊıÑ§¹«Ê½
+\RequirePackage{amsfonts,amsmath,amssymb} % AMS-LaTeX ·ûºÅ¡¢¹«Ê½
 
-% å®šç†ç¯å¢ƒå£°æ˜
-% äº‹å®ä¸Šå¤§éƒ¨åˆ†è®ºæ–‡ä¸­ç”¨ä¸åˆ°ï¼Œä½†ä»ä¿ç•™ä»¥ä¾›ä½¿ç”¨
+% ¶¨Àí»·¾³ÉùÃ÷
+% ÊÂÊµÉÏ´ó²¿·ÖÂÛÎÄÖĞÓÃ²»µ½£¬µ«ÈÔ±£ÁôÒÔ¹©Ê¹ÓÃ
 \newtheorem{Theorem}{Theorem}[section]
 \newtheorem{Lemma}[Theorem]{Lemma}
 \newtheorem{Corollary}[Theorem]{Corollary}
@@ -41,19 +41,19 @@
 \newtheorem{Definition}[Theorem]{Definition}
 \newtheorem{Example}[Theorem]{Example}
 
-% ç›®å½•
-\RequirePackage{titlesec,titletoc}  % è‡ªå®šä¹‰ç›®å½•æ ·å¼
-\setcounter{tocdepth}{3}  % ç›®å½•æ˜¾ç¤ºåˆ° subsubsection(3) çº§åˆ«
-\RequirePackage[font=small]{caption}  % ä½¿å›¾è¡¨æ ‡é¢˜å­—å·å°ä¸€å·
-\renewcommand\abstractname{Summary}  % æ‘˜è¦æ ‡é¢˜
+% Ä¿Â¼
+\RequirePackage{titlesec,titletoc}  % ×Ô¶¨ÒåÄ¿Â¼ÑùÊ½
+\setcounter{tocdepth}{3}  % Ä¿Â¼ÏÔÊ¾µ½ subsubsection(3) ¼¶±ğ
+\RequirePackage[font=small]{caption}  % Ê¹Í¼±í±êÌâ×ÖºÅĞ¡Ò»ºÅ
+\renewcommand\abstractname{Summary}  % ÕªÒª±êÌâ
 
-% è¡¨æ ¼ç›¸å…³
-\RequirePackage{longtable,multirow,array}  % å„ç§åŸºæœ¬çš„è¡¨æ ¼å®åŒ…
-\RequirePackage{booktabs}  % ä¸‰çº¿è¡¨å®åŒ…
+% ±í¸ñÏà¹Ø
+\RequirePackage{longtable,multirow,array}  % ¸÷ÖÖ»ù±¾µÄ±í¸ñºê°ü
+\RequirePackage{booktabs}  % ÈıÏß±íºê°ü
 
-% å­—ä½“ç›¸å…³
-\RequirePackage[T1]{fontenc}  % å¼€å¯æ‹“å±•åŒºæ­£æ–‡å­—ä½“
-\RequirePackage{url}  % ç½‘å€å®åŒ…ï¼Œä»¥ä¸‹å‘½ä»¤ä½¿å¾—ç½‘å€èƒ½è‡ªåŠ¨æ¢è¡Œ
+% ×ÖÌåÏà¹Ø
+\RequirePackage[T1]{fontenc}  % ¿ªÆôÍØÕ¹ÇøÕıÎÄ×ÖÌå
+\RequirePackage{url}  % ÍøÖ·ºê°ü£¬ÒÔÏÂÃüÁîÊ¹µÃÍøÖ·ÄÜ×Ô¶¯»»ĞĞ
 \def\UrlBreaks{\do\A\do\B\do\C\do\D\do\E\do\F\do\G\do\H\do\I\do\J
 \do\K\do\L\do\M\do\N\do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V
 \do\W\do\X\do\Y\do\Z\do\[\do\\\do\]\do\^\do\_\do\`\do\a\do\b
@@ -62,33 +62,33 @@
 \do\.\do\@\do\\\do\/\do\!\do\_\do\|\do\;\do\>\do\]\do\)\do\,
 \do\?\do\'\do+\do\=\do\#}
 
-% åŸºæœ¬å‚æ•°
+% »ù±¾²ÎÊı
 \setlength{\headheight}{15pt}
-\newcommand{\MCM@control}{0000000}  % é˜Ÿä¼æ§åˆ¶å·ï¼Œé»˜è®¤ä¸º 0000000
-\DeclareOption*{\edef\MCM@control{\CurrentOption}}  % å®åŒ…é€‰é¡¹æ¥æ”¶æ§åˆ¶å·
+\newcommand{\MCM@control}{0000000}  % ¶ÓÎé¿ØÖÆºÅ£¬Ä¬ÈÏÎª 0000000
+\DeclareOption*{\edef\MCM@control{\CurrentOption}}  % ºê°üÑ¡Ïî½ÓÊÕ¿ØÖÆºÅ
 \ProcessOptions
 \newcommand{\control}{\MCM@control}
 \newcommand{\team}{Team \#\ \MCM@control}
 \newcommand{\contest}{MCM/ICM}
 
-% ä¹¦ç­¾ï¼Œæ’å›¾å’Œäº¤å‰å¼•ç”¨çš„è®¾ç½®
-\RequirePackage{graphicx}  % æ’å›¾
-\RequirePackage{subcaption}  % å­å›¾
-\RequirePackage{flafter}  % å¼•ç”¨è¯¥å®åŒ…å¯é¿å…å›¾ç‰‡åœ¨å¼•ç”¨å®ƒçš„æ­£æ–‡ä¹‹å‰å‡ºç°
-\RequirePackage{ifpdf}  % åˆ¤æ–­æ˜¯å¦åœ¨è¿è¡Œ pdftex
+% ÊéÇ©£¬²åÍ¼ºÍ½»²æÒıÓÃµÄÉèÖÃ
+\RequirePackage{graphicx}  % ²åÍ¼
+\RequirePackage{subcaption}  % ×ÓÍ¼
+\RequirePackage{flafter}  % ÒıÓÃ¸Ãºê°ü¿É±ÜÃâÍ¼Æ¬ÔÚÒıÓÃËüµÄÕıÎÄÖ®Ç°³öÏÖ
+\RequirePackage{ifpdf}  % ÅĞ¶ÏÊÇ·ñÔÚÔËĞĞ pdftex
 \ifpdf%
-\RequirePackage{epstopdf}  % pdftex ä¸èƒ½ä½¿ç”¨ eps å›¾ç‰‡ï¼Œç”¨è¯¥å®åŒ…è½¬æˆ pdf åä½¿ç”¨
-\DeclareGraphicsExtensions{.pdf,.jpg,.jpeg,.png}    % å…è®¸çš„å›¾ç‰‡ç±»å‹
+\RequirePackage{epstopdf}  % pdftex ²»ÄÜÊ¹ÓÃ eps Í¼Æ¬£¬ÓÃ¸Ãºê°ü×ª³É pdf ºóÊ¹ÓÃ
+\DeclareGraphicsExtensions{.pdf,.jpg,.jpeg,.png}    % ÔÊĞíµÄÍ¼Æ¬ÀàĞÍ
 \RequirePackage[
-    linkcolor=black,  % æ¶ˆé™¤é“¾æ¥è‰²å½©
+    linkcolor=black,  % Ïû³ıÁ´½ÓÉ«²Ê
     citecolor=black,
     colorlinks=true,
     linkcolor=black,
     citecolor=black,
     urlcolor=black]{hyperref}
-\else\DeclareGraphicsExtensions{.eps,.ps}  % ä¸éœ€è¦è½¬æ¢ eps å›¾ç‰‡æ ¼å¼
+\else\DeclareGraphicsExtensions{.eps,.ps}  % ²»ĞèÒª×ª»» eps Í¼Æ¬¸ñÊ½
 \ifxetex\RequirePackage[
-    xetex,  % è¿è¡Œ xetex
+    xetex,  % ÔËĞĞ xetex
     pdfstartview=FitH,
     bookmarksnumbered=true,
     bookmarksopen=true,
@@ -97,7 +97,7 @@
     citecolor=black,
     urlcolor=black]{hyperref}
 \else\RequirePackage[
-    dvipdfm,  % è¿è¡Œå…¶ä»–ç¼–è¯‘å¼•æ“ï¼ˆå¦‚ luatexï¼‰
+    dvipdfm,  % ÔËĞĞÆäËû±àÒëÒıÇæ£¨Èç luatex£©
     pdfstartview=FitH,
     bookmarksnumbered=true,
     bookmarksopen=true,
@@ -107,34 +107,34 @@
     urlcolor=black]{hyperref}
 \fi\fi
 
-% ä»¥ä¸‹è®¾ç½®ä½¿å¾—ä¸€é¡µä¸Šæœ€å¤šæœ‰å…­ä¸ªæµ®åŠ¨å¯¹è±¡ï¼ˆå›¾ã€è¡¨ï¼‰
-% ä¸”é¡¶éƒ¨æœ€å¤šä¸‰ä¸ªï¼Œåº•éƒ¨æœ€å¤šä¸‰ä¸ª
-% å¯è‡ªè¡Œä¿®æ”¹å‚æ•°
+% ÒÔÏÂÉèÖÃÊ¹µÃÒ»Ò³ÉÏ×î¶àÓĞÁù¸ö¸¡¶¯¶ÔÏó£¨Í¼¡¢±í£©
+% ÇÒ¶¥²¿×î¶àÈı¸ö£¬µ×²¿×î¶àÈı¸ö
+% ¿É×ÔĞĞĞŞ¸Ä²ÎÊı
 \setcounter{totalnumber}{6}
 \setcounter{topnumber}{3}
 \setcounter{bottomnumber}{3}
 
-% å¾ˆå¤šäººå‘ç°ç¼ºçœçš„æµ®åŠ¨å‚æ•°è¿‡äºä¸¥æ ¼äº†
-% ä¸‹é¢çš„å‘½ä»¤
+% ºÜ¶àÈË·¢ÏÖÈ±Ê¡µÄ¸¡¶¯²ÎÊı¹ıÓÚÑÏ¸ñÁË
+% ÏÂÃæµÄÃüÁî
 \renewcommand{\textfraction}{0.15}
 \renewcommand{\topfraction}{0.85}
 \renewcommand{\bottomfraction}{0.65}
 \renewcommand{\floatpagefraction}{0.60}
-% å°†æµ®åŠ¨å‚æ•°é‡æ–°è®¾ç½®ä¸ºæ›´å®½æ¾çš„å€¼ã€‚
-% ---é€‰è‡ªã€ŠLaTeX2eæ’å›¾æŒ‡å—ã€‹
+% ½«¸¡¶¯²ÎÊıÖØĞÂÉèÖÃÎª¸ü¿íËÉµÄÖµ¡£
+% ---Ñ¡×Ô¡¶LaTeX2e²åÍ¼Ö¸ÄÏ¡·
 
-% å›¾è¡¨æ ‡é¢˜åç§°
+% Í¼±í±êÌâÃû³Æ
 \renewcommand{\figurename}{Figure}
 \renewcommand{\tablename}{Table}
 \setlength{\belowcaptionskip}{4pt}
-\setlength{\abovecaptionskip}{4pt}  % è®¾ç½® caption ä¸ä¸Šä¸‹æ–‡é—´è·
+\setlength{\abovecaptionskip}{4pt}  % ÉèÖÃ caption ÓëÉÏÏÂÎÄ¼ä¾à
 
-% ä»¥ä¸‹å®šä¹‰äº†è‡ªåŠ¨è¯†åˆ«çš„å›¾è¡¨æ–‡ä»¶å¤¹
-% è‹¥ä½¿ç”¨è¿™äº›åå­—å‘½åæ–‡ä»¶å¤¹
-% åˆ™å¼•ç”¨å›¾ç‰‡è·¯å¾„æ—¶åªéœ€å¡«æ–‡ä»¶åå³å¯
+% ÒÔÏÂ¶¨ÒåÁË×Ô¶¯Ê¶±ğµÄÍ¼±íÎÄ¼ş¼Ğ
+% ÈôÊ¹ÓÃÕâĞ©Ãû×ÖÃüÃûÎÄ¼ş¼Ğ
+% ÔòÒıÓÃÍ¼Æ¬Â·¾¶Ê±Ö»ĞèÌîÎÄ¼şÃû¼´¿É
 \graphicspath{{./}{./img/}{./fig/}{./image/}{./figure/}{./picture/}}
 
-% é¡µçœ‰é¡µè„šè®¾ç½®
+% Ò³Ã¼Ò³½ÅÉèÖÃ
 \lhead{\small \team}
 \chead{}
 \rhead{\small Page \thepage\ of \pageref{LastPage}}
@@ -142,14 +142,14 @@
 \cfoot{}
 \rfoot{}
 
-% ä¿¡ä»¶/å¤‡å¿˜å½•ç¯å¢ƒ
-\newcounter{prefix}  % åˆ›å»ºéšè—å‰ç¼€è®¡æ•°å™¨ï¼Œé¿å…å¯¹ letter ç¯å¢ƒç¼–å·
-\renewcommand{\theHsection}{\theprefix.\thesection}  % é’ˆå¯¹ hyperref
+% ĞÅ¼ş/±¸ÍüÂ¼»·¾³
+\newcounter{prefix}  % ´´½¨Òş²ØÇ°×º¼ÆÊıÆ÷£¬±ÜÃâ¶Ô letter »·¾³±àºÅ
+\renewcommand{\theHsection}{\theprefix.\thesection}  % Õë¶Ô hyperref
 \newenvironment{letter}[1]{\refstepcounter{section}\addtocounter{section}{-1}\section*{#1}\addcontentsline{toc}{section}{#1}}{\stepcounter{prefix}}
 
-% é™„å½•ä»£ç ç¯å¢ƒ
+% ¸½Â¼´úÂë»·¾³
 \RequirePackage{listings}
-\renewcommand*{\ttdefault}{txtt}  % ä»£ç å­—ä½“
+\renewcommand*{\ttdefault}{txtt}  % ´úÂë×ÖÌå
 \lstset{
     showspaces = false,
     showstringspaces = false,
@@ -160,23 +160,23 @@
     keywordstyle = {\bfseries},
     tabsize = 4}
 
-% å¿«ä¹ etoolbox
-\RequirePackage{etoolbox}  % å‡è½»æ­£æ–‡å¤æ‚åº¦
-\AtBeginEnvironment{abstract}{\setlength\parskip{1ex}}  % æ‘˜è¦ä¸­å¢åŠ æ®µè·
+% ¿ìÀÖ etoolbox
+\RequirePackage{etoolbox}  % ¼õÇáÕıÎÄ¸´ÔÓ¶È
+\AtBeginEnvironment{abstract}{\setlength\parskip{1ex}}  % ÕªÒªÖĞÔö¼Ó¶Î¾à
 \AtBeginEnvironment{thebibliography}{
     \refstepcounter{section}
-    \addcontentsline{toc}{section}{References}}  % å‚è€ƒæ–‡çŒ®é™„åŠ é“¾æ¥
+    \addcontentsline{toc}{section}{References}}  % ²Î¿¼ÎÄÏ×¸½¼ÓÁ´½Ó
 \BeforeBeginEnvironment{subappendices}{
     \clearpage
-    \setcounter{secnumdepth}{-1}}  % é™„å½•é™„åŠ é“¾æ¥
-\BeforeBeginEnvironment{letter}{\clearpage}  % ä¿¡ä»¶ç¯å¢ƒé™„åŠ æ¢é¡µ
+    \setcounter{secnumdepth}{-1}}  % ¸½Â¼¸½¼ÓÁ´½Ó
+\BeforeBeginEnvironment{letter}{\clearpage}  % ĞÅ¼ş»·¾³¸½¼Ó»»Ò³
 
-% COMAP è¦æ±‚çš„ Summary Sheet æ ‡é¢˜ï¼ˆ2020ï¼‰
-% æ³¨æ„æ¯å¹´æ¯”èµ›æ—¶æœ‰å¯èƒ½æœ‰å°è°ƒæ•´
-% è¯·ä»¥å®˜ç½‘å‘å¸ƒçš„æ ·å¼ä¸ºå‡†è‡ªè¡Œåšå°çš„ä¿®æ”¹ï¼
+% COMAP ÒªÇóµÄ Summary Sheet ±êÌâ£¨2020£©
+% ×¢ÒâÃ¿Äê±ÈÈüÊ±ÓĞ¿ÉÄÜÓĞĞ¡µ÷Õû
+% ÇëÒÔ¹ÙÍø·¢²¼µÄÑùÊ½Îª×¼×ÔĞĞ×öĞ¡µÄĞŞ¸Ä£¡
 \newcommand{\@problem}[1]{}
 \newcommand{\problem}[1]{\gdef\@problem{#1}}
-\newcommand{\makesheet}{ %ç”Ÿæˆsheetå¤´å‘½ä»¤çš„å®šä¹‰
+\newcommand{\makesheet}{ %Éú³ÉsheetÍ·ÃüÁîµÄ¶¨Òå
     \null%
     \vspace*{-5pc}%
     \begin{center}
@@ -202,26 +202,26 @@
     \vskip 10pt%
     \end{center}}
 
-% abstract ç¯å¢ƒçš„è®¾ç½®
-\newbox\@abstract   % å°†æ‘˜è¦åˆ›å»ºä¸ºç›’å­
-\setbox\@abstract\hbox{}  % ç›’å­ç½®ç©º
+% abstract »·¾³µÄÉèÖÃ
+\newbox\@abstract   % ½«ÕªÒª´´½¨ÎªºĞ×Ó
+\setbox\@abstract\hbox{}  % ºĞ×ÓÖÃ¿Õ
 \long\def\abstract{\bgroup\global\setbox\@abstract\vbox\bgroup\hsize\textwidth}
 \def\endabstract{\egroup\egroup}
 \def\make@abstract{
     \vskip -10pt\par
-    {\centering\Large\bfseries\@title\vskip1ex}\par  % æ’å…¥è®ºæ–‡æ ‡é¢˜ï¼Œå­—å·å¯è‡ªå·±ä¿®æ”¹
-    {\centering\bfseries\abstractname\vskip1.5ex}\par  %æ‘˜è¦æ ‡é¢˜
-    \noindent\usebox\@abstract\par  % æ‘˜è¦æ­£æ–‡
-    \vskip 10pt}  % åº•éƒ¨ç•™ç©ºï¼Œè‹¥ä¸éœ€è¦å¯åˆ å»
+    {\centering\Large\bfseries\@title\vskip1ex}\par  % ²åÈëÂÛÎÄ±êÌâ£¬×ÖºÅ¿É×Ô¼ºĞŞ¸Ä
+    {\centering\bfseries\abstractname\vskip1.5ex}\par  %ÕªÒª±êÌâ
+    \noindent\usebox\@abstract\par  % ÕªÒªÕıÎÄ
+    \vskip 10pt}  % µ×²¿Áô¿Õ£¬Èô²»ĞèÒª¿ÉÉ¾È¥
 
-% Summary Sheet ç”Ÿæˆ
+% Summary Sheet Éú³É
 \def\@maketitle{
 	\makesheet%
 	\make@abstract
     \pagestyle{empty}
     \newpage}
 
-% ç›®å½•ç”Ÿæˆ
+% Ä¿Â¼Éú³É
 \renewcommand\tableofcontents{%
     \centerline{\normalfont\Large\bfseries\contentsname%
     \@mkboth{%
@@ -231,6 +231,6 @@
     \thispagestyle{empty}
     \clearpage
     \pagestyle{fancy}
-    \setlength\parskip{1ex}}  % è°ƒæ•´æ®µé—´è·
+    \setlength\parskip{1ex}}  % µ÷Õû¶Î¼ä¾à
 
 \endinput
