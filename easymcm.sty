@@ -17,8 +17,8 @@
 %%
 
 \NeedsTeXFormat{LaTeX2e}[2005/12/01]
-\ProvidesPackage{easymcm}[2021/01/28 EasyMCM v5.2]
-\typeout{EasyMCM Package, version 5.2}
+\ProvidesPackage{easymcm}[2021/02/04 EasyMCM v5.2.1]
+\typeout{EasyMCM Package, version 5.2.1}
 
 % 基本宏包 
 \RequirePackage[a4paper,margin=2.5cm,bottom=1.5cm]{geometry}  % 页边距和纸张大小
@@ -228,7 +228,7 @@
     \MakeUppercase\contentsname}{\MakeUppercase\contentsname}}%
     \vskip 3ex%
     \@starttoc{toc}%
-    \thispagestyle{empty}
+    \thispagestyle{fancy}
     \clearpage
     \pagestyle{fancy}
     \setlength\parskip{1ex}}  % 调整段间距
