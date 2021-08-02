@@ -44,4 +44,4 @@ easymcm 是一个为美国大学生数学建模竞赛（MCM）准备的简易 La
 
 - 在本模板的[讨论页面](https://github.com/xjtu-blacksmith/easymcm/discussions)发布帖子（推荐，但需要注册 GitHub 账号）；
 - 在作者的[博客页面](https://www.cnblogs.com/xjtu-blacksmith/p/easymcm.html)发布评论（不推荐，需要注册博客园账号）；
-- 通过作者的邮箱 yjr134@163.com 联系作者（不推荐，作者很可能不会回复你）。
+- 通过作者的邮箱 xjbs@protonmail.com 联系作者（不推荐，作者很可能不会回复你）。
