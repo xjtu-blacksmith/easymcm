@@ -7,7 +7,7 @@ easymcm 是一个为美国大学生数学建模竞赛（MCM）准备的简易 La
 
 > 事实上，`easymcm` 与另一美赛 `mcmthesis` 的最新版本并无关联，后者为一个文档类（class）而非一个宏包（package）。该文档类现由 [Liam0205](https://github.com/Liam0205/mcmthesis/releases/) 维护。
 
-关于 `easymcm` 的说明及其来由，详见原作者[黑山雁的博客](https://www.cnblogs.com/xjtu-blacksmith/p/9737960.html)。2019 年时，easymcm 宏包由[黑山雁](https://github.com/xjtu-blacksmith)移交给[钱院学辅](https://github.com/qyxf)组织管理；到 2020 年，因若干原因，本模板再次移回到黑山雁个人名下。
+关于 `easymcm` 的说明及其来由，详见原作者[黑山雁的博客](https://xjtu-blacksmith.cn/program/easymcm)。2019 年时，easymcm 宏包由[黑山雁](https://github.com/xjtu-blacksmith)移交给[钱院学辅](https://qyxf.site)组织管理；到 2020 年，因若干原因，本模板再次移回到黑山雁个人名下。
 
 ## 发布渠道
 
@@ -43,5 +43,4 @@ easymcm 是一个为美国大学生数学建模竞赛（MCM）准备的简易 La
 本模板目前由[黑山雁](https://github.com/xjtu-blacksmith)维护。若在使用过程中出现任何问题，可通过以下方式联系作者：
 
 - 在本模板的[讨论页面](https://github.com/xjtu-blacksmith/easymcm/discussions)发布帖子（推荐，但需要注册 GitHub 账号）；
-- 在作者的[博客页面](https://www.cnblogs.com/xjtu-blacksmith/p/easymcm.html)发布评论（不推荐，需要注册博客园账号）；
 - 通过作者的邮箱 xjbs@protonmail.com 联系作者（不推荐，作者很可能不会回复你）。
