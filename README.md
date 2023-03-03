@@ -3,6 +3,12 @@
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/xjtu-blacksmith/easymcm)](https://github.com/xjtu-blacksmith/easymcm/releases)
 ![GitHub All Releases](https://img.shields.io/github/downloads/xjtu-blacksmith/easymcm/total)
 
+|:warning: 停止更新说明|
+|:-|
+|因个人时间精力有限，且已本科毕业多年，无法再关注到比赛相关进展，恐该模板无法及时在每年比赛前适配实现相应功能，决定自【**2023 年上半年**】开始停止更新维护！各位新用户如希望继续使用 LaTeX 参加美塞建模，请使用由 LaTeXStudio 开发维护的 `mcmthesis` 文档类：[GitHub 主页](https://github.com/latexstudio-org/mcmthesis)；或者，也可在 <https://latexstudio.net> 上查找其他用户发布的美塞简易模板及论文样例，它们的开发时间更新，在使用上也较本模板更为灵活，可根据自己的需要增添功能。<br>感谢大家多年来对本模板的支持！如果您是低年级在校大学生，有意接力本模板的继续维护更新，也欢迎通过邮件与我取得联系：<xjbs@proton.me>
+
+---
+
 easymcm 是一个为美国大学生数学建模竞赛（MCM）准备的简易 LaTeX 模板。它二次开发自 LaTeX 宏包 `mcmthesis` 于 2013 年发布的 `v5.0` 版本，原作者是[王昭礼](http://www.latexstudio.net)。
 
 > 事实上，`easymcm` 与另一美赛 `mcmthesis` 的最新版本并无关联，后者为一个文档类（class）而非一个宏包（package）。该文档类现由 [Liam0205](https://github.com/Liam0205/mcmthesis/releases/) 维护。
